@@ -1,9 +1,9 @@
-<script setup></script>
+<script setup>
+import JavaMan from './pages/JavaMan.vue';
+</script>
 
 <template>
-  <div class="page">
-    <p>JavaMan</p>
-  </div>
+  <JavaMan/>
 </template>
 
 <style scoped>
