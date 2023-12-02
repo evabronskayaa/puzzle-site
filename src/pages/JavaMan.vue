@@ -1,24 +1,26 @@
 <template>
-  <div>
+  <div id="app">
     <vue-fake-input
       :length="5"
       :fontSize="40"
-      inputColor="fff"
-      fontColor="fff"
-      :allowPaste="false"
-      v-model="fullValue"
+      v-model="fkValue"
     />
-    <p>text</p>
+    <h2>Value: {{fkValue}}</h2>
   </div>
 </template>
 
 <script>
-import VueFakeInput from 'vue-fake-input'
+import VueFakeInput from '../components/VueFakeInput.vue';
 
 export default {
   name: 'JavaMan',
   components: {
-    VueFakeInput
+    VueFakeInput,
+  },
+  data() {
+    return {
+      fkValue: '',
+    };
   }
-}
+};
 </script>
