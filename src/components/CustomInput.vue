@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <vue-fake-input :length="len" :fontSize="40" v-model="fkValue" @input="updateFkValue" />
+    <vue-fake-input :length="len" :fontSize="40" v-model="fkValue" @input="updateFkValue" :theme="theme"  />
   </div>
 </template>
 
@@ -13,7 +13,8 @@ export default {
     VueFakeInput
   },
   props: {
-    len: Number
+    len: Number,
+    theme: String
   },
   data() {
     return {

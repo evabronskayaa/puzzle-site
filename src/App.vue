@@ -1,9 +1,13 @@
 <script setup>
-import JavaMan from './pages/JavaMan.vue';
+import ThirdTask from './pages/ThirdTask.vue';
+// import TheWelcome from './pages/TheWelcome.vue';
+// import FirstTask from './pages/FirstTask.vue';
+// import SecondTask from './pages/SecondTask.vue';
+// import FourthTask from './pages/FourthTask.vue';
 </script>
 
 <template>
-  <JavaMan/>
+  <ThirdTask/>
 </template>
 
 <style scoped>

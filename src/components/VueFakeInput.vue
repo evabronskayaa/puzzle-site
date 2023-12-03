@@ -80,18 +80,23 @@ export default {
       return (index) => {
         const color = this.inputValues[index] ? this.inputColor : '#eeeeee'
         let styles = {
-          border: `3px solid ${color}`,
-          fontSize: this.fkFontSize,
-          width: this.fkWidth,
-          color: this.fontColor
+          "border-bottom": `3px solid ${color}`,
+          "fontSize": this.fkFontSize,
+          "width": this.fkWidth,
+          "color": this.fontColor
         }
 
         if (this.theme === 'dark') {
-          // Добавляем стили для темной темы
           styles = {
             ...styles,
             color: 'white',
             background: 'black'
+          }
+        } else if (this.theme === 'light'){
+          styles = {
+            ...styles,
+            color: 'black',
+            background: 'white'
           }
         }
 
@@ -175,7 +180,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .fk-input-container {
   display: inline-block;
 
