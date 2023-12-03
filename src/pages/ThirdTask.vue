@@ -22,7 +22,7 @@
 import CustomInput from '../components/CustomInput.vue'
 
 export default {
-  name: 'JavaMan',
+  name: 'ThirdTask',
   components: {
     CustomInput
   },
@@ -49,8 +49,8 @@ export default {
 
     handleCheckAnswer() {
       const t = this.fkValue.toUpperCase()
-      console.log(t)
-      if (t === 'LENA') alert("That's true")
+      let key = import.meta.env.VITE_THIRD_TASK_ANSWER
+      if (t === key) alert("That's true")
     }
   }
 }
