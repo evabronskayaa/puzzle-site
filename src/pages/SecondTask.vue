@@ -4,8 +4,8 @@
       <h1>
         fB6ulcJRFN2kJkEPlTW/UGl4TnU8GacMc56MyUoh2PDC/<br />sCdKA0orbLdSTogNtNvH/6OYmWypc5KrrRfNXw+q0vw8<br />7C/fOi19dbi7FJFqLw/WsTogCMLTeRJrrKKBfwK
       </h1>
-      <!-- https://magictool.ai/tool/encrypt-text/ru/ -->
-      <CustomInput :len="9" @fkValueChanged="handleFkValueChanged" :theme="dark" />
+      <p>https://magictool.ai/tool/encrypt-text/ru/</p>
+      <CustomInput :len="9" @fkValueChanged="handleFkValueChanged" theme="light" />
 
       <button @click="handleCheckAnswer">Try to send</button>
     </div>
@@ -82,6 +82,12 @@ h1 {
   font-size: 30px;
   margin-bottom: 100px;
   font-weight: 400;
+}
+
+p {
+  color: white;
+  bottom: 0;
+  left: 0;
 }
 
 button {

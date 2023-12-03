@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="answer">
-        <CustomInput :len="4" @fkValueChanged="handleFkValueChanged" :theme="dark" />
+        <CustomInput :len="4" @fkValueChanged="handleFkValueChanged" theme="dark" />
         <button @click="handleCheckAnswer">Try to send</button>
       </div>
     </div>
@@ -25,6 +25,12 @@ export default {
   name: 'ThirdTask',
   components: {
     CustomInput
+  },
+  props: {
+    goOn: {
+      type: Function,
+      required: true
+    }
   },
   data() {
     return {
@@ -51,6 +57,7 @@ export default {
       const t = this.fkValue.toUpperCase()
       let key = import.meta.env.VITE_THIRD_TASK_ANSWER
       if (t === key) alert("That's true")
+      this.goOn();
     }
   }
 }

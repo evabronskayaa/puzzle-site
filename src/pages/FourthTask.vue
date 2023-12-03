@@ -5,7 +5,7 @@
         Remember the latest code :)<br />You have a special date with this person. It’s ur last
         task: remember the date...
       </h1>
-      <CustomInput :len="8" @fkValueChanged="handleFkValueChanged" :theme="dark" />
+      <CustomInput :len="8" @fkValueChanged="handleFkValueChanged" theme="light" />
 
       <button @click="handleCheckAnswer">Try to send</button>
       <p>https://confluence.napoleonit.ru/pages/viewpage.action?pageId=92430513</p>
@@ -21,6 +21,12 @@ export default {
   components: {
     CustomInput
   },
+  props: {
+    goOn: {
+      type: Function,
+      required: true
+    }
+  },
   data() {
     return {
       fkValue: '',
@@ -35,6 +41,7 @@ export default {
       const t = this.fkValue.toUpperCase()
       let key = import.meta.env.VITE_FOURTH_TASK_ANSWER
       if (t === key) alert("That's true")
+      this.goOn();
     }
   }
 }

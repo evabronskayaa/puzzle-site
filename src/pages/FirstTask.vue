@@ -2,7 +2,7 @@
   <div id="app" class="background">
     <div class="content">
       <h1>Enter number:</h1>
-      <CustomInput :len="2" @fkValueChanged="handleFkValueChanged" :theme="dark" />
+      <CustomInput :len="2" @fkValueChanged="handleFkValueChanged" theme="dark" />
 
       <button @click="handleCheckAnswer">Try to send</button>
       <p class="hint-text">Have difficulties? Get <a @click="handleClicks">hint</a></p>
