@@ -18,6 +18,12 @@ export default {
   components: {
     CustomInput
   },
+  props: {
+    goOn: {
+      type: Function,
+      required: true
+    }
+  },
   data() {
     return {
       fkValue: '',
@@ -42,6 +48,7 @@ export default {
 
       let key = import.meta.env.VITE_FIRST_TASK_ANSWER
       if (t === key) alert("That's true")
+      this.goOn();
     }
   }
 }

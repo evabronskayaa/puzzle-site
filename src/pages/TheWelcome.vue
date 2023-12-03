@@ -1,39 +1,43 @@
 <template>
-    <div id="app" class="main">
-      <div class="content">
-        <h1>Welcome Alex!</h1>
-        <h2>Glad to see u here</h2>
-        <br>
-        <img src="../assets/arrow.png" width="222"/>
-        <br>
-        <button>Start</button>
-      </div>
+  <div id="app" class="main">
+    <div class="content">
+      <h1>Welcome Alex!</h1>
+      <h2>Glad to see u here</h2>
+      <br />
+      <img src="../assets/arrow.png" width="222" />
+      <br />
+      <button @click="goOn">Start</button>
     </div>
+  </div>
 </template>
-  
+
 <script>
-  
-  export default {
-    name: 'TheWelcome',
-    components: {
+export default {
+  name: 'TheWelcome',
+  components: {},
+  props: {
+    goOn: {
+      type: Function,
+      required: true
     }
   }
+}
 </script>
 
 <style scoped>
-h1, h2{
+h1,
+h2 {
   color: white;
 }
 
-
-h1{
+h1 {
   font-size: 64px;
   text-transform: uppercase;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
-h2{
+h2 {
   font-size: 40px;
   margin-top: 0;
   font-weight: 400;
@@ -43,7 +47,7 @@ h2{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../assets/gradient_background.png");
+  background-image: url('../assets/gradient_background.png');
   margin: 0;
   position: fixed;
   top: 0;
@@ -56,7 +60,7 @@ h2{
   background-repeat: no-repeat;
 }
 
-.content{
+.content {
   text-align: center;
   display: inline-block;
 }
@@ -65,7 +69,7 @@ button {
   align-items: center;
   color: white;
   background: transparent;
-  border: 0 solid #E2E8F0;
+  border: 0 solid #e2e8f0;
   display: inline-flex;
   font-size: 1rem;
   font-weight: 500;
@@ -80,7 +84,4 @@ button {
   text-transform: lowercase;
   margin: 10px 0;
 }
-
-
 </style>
-  

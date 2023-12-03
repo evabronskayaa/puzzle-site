@@ -20,6 +20,12 @@ export default {
   components: {
     CustomInput
   },
+  props: {
+    goOn: {
+      type: Function,
+      required: true
+    }
+  },
   data() {
     return {
       fkValue: '',
@@ -35,6 +41,7 @@ export default {
       const t = this.fkValue.toUpperCase()
       let key = import.meta.env.VITE_SECOND_TASK_ANSWER
       if (t === key) alert("That's true")
+      this.goOn();
     }
   }
 }
