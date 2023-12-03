@@ -71,10 +71,10 @@ button {
   background: transparent;
   border: 0 solid #e2e8f0;
   display: inline-flex;
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 500;
   justify-content: center;
-  padding: 10px 30px;
+  padding: 10px 10px;
   text-decoration: none;
   width: auto;
   cursor: pointer;
@@ -82,6 +82,6 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   text-transform: lowercase;
-  margin: 10px 0;
+  margin: 10;
 }
 </style>
