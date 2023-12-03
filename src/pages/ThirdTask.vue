@@ -56,8 +56,10 @@ export default {
     handleCheckAnswer() {
       const t = this.fkValue.toUpperCase()
       let key = import.meta.env.VITE_THIRD_TASK_ANSWER
-      if (t === key) alert("That's true")
-      this.goOn();
+      if (t === key) {
+        alert("That's true")
+        this.goOn()
+      }
     }
   }
 }

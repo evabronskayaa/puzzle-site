@@ -47,8 +47,10 @@ export default {
       const t = this.fkValue.toUpperCase()
 
       let key = import.meta.env.VITE_FIRST_TASK_ANSWER
-      if (t === key) alert("That's true")
-      this.goOn();
+      if (t === key) {
+        alert("That's true")
+        this.goOn()
+      }
     }
   }
 }
